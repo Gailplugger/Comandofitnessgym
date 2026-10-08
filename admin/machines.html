@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage mock machine library content in the COMMando Fitness Gym prototype." />
+    <title>Machine Management | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/components.js"></script>
+    <script type="module" src="../js/admin/guard.js"></script>
+    <script type="module" src="../js/admin/machines.js"></script>
+  </head>
+  <body class="admin-page" data-page="admin-machines" style="visibility:hidden">
+    <header class="admin-topbar"><a class="brand-wrap" href="index.html"><img src="../assets/logo/commando-mark.svg" alt="" />COMMando Admin</a><nav class="admin-nav" aria-label="Admin navigation"><a href="index.html">Dashboard</a><a href="machines.html" class="active">Machines</a><a href="fees.html">Fees</a><a href="notifications.html">Notifications</a><a href="surveys.html">Surveys</a><a href="responses.html">Responses</a><a href="enquiries.html">Enquiries</a></nav><button class="btn btn-primary" id="add-machine-btn" type="button">Add machine</button></header>
+    <main class="admin-shell"><section class="admin-hero"><div><span class="eyebrow accent">Management</span><h1>Machine library</h1></div><p>Changes are saved to Firestore and appear on the public site when published.</p></section><section class="card-panel table-panel"><div class="table-wrap"><table><thead><tr><th>Machine</th><th>Category</th><th>Status</th><th>Actions</th></tr></thead><tbody id="admin-machines-table"></tbody></table></div></section></main>
+    <dialog id="machine-modal" class="admin-modal"><form id="machine-form" method="dialog"><div class="modal-head"><h2>Add machine</h2><button class="icon-button" type="button" data-close-modal="machine-modal" aria-label="Close">×</button></div><div class="form-grid two"><label><span>Name</span><input type="text" name="name" required /></label><label><span>Category</span><input type="text" name="category" required /></label><label><span>Target muscles</span><input type="text" name="muscles" required /></label><label><span>Status</span><select name="status"><option>Published</option><option>Draft</option></select></label><label class="full"><span>Description</span><textarea name="description" rows="3" required></textarea></label><label class="full"><span>Instructions</span><textarea name="instructions" rows="3" required></textarea></label><label><span>Sets</span><input type="text" name="sets" value="3-4" /></label><label><span>Reps</span><input type="text" name="reps" value="8-12" /></label><label class="full"><span>Common mistakes</span><textarea name="commonMistakes" rows="2"></textarea></label><label class="full"><span>Safety tips</span><textarea name="safetyTips" rows="2"></textarea></label><label class="full"><span>Coach tip</span><textarea name="coachTip" rows="2"></textarea></label><label class="full"><span>Tutorial URL</span><input type="url" name="tutorialUrl" /></label><label class="full"><span>Image asset path (relative to site root)</span><input type="text" name="image" value="assets/images/placeholder-machine.svg" /></label></div><div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal="machine-modal">Cancel</button><button class="btn btn-primary" type="submit">Save machine</button></div></form></dialog>
+  </body>
+</html>

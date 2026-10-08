@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Build and manage demo surveys for COMMando Fitness Gym." />
+    <title>Survey Builder | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/components.js"></script>
+    <script type="module" src="../js/admin/guard.js"></script>
+    <script type="module" src="../js/admin/surveys.js"></script>
+  </head>
+  <body class="admin-page" data-page="admin-surveys" style="visibility:hidden">
+    <header class="admin-topbar"><a class="brand-wrap" href="index.html"><img src="../assets/logo/commando-mark.svg" alt="" />COMMando Admin</a><nav class="admin-nav" aria-label="Admin navigation"><a href="index.html">Dashboard</a><a href="machines.html">Machines</a><a href="fees.html">Fees</a><a href="notifications.html">Notifications</a><a href="surveys.html" class="active">Surveys</a><a href="responses.html">Responses</a><a href="enquiries.html">Enquiries</a></nav><button class="btn btn-primary" id="new-survey-btn" type="button">New survey</button></header>
+    <main class="admin-shell"><section class="admin-hero"><div><span class="eyebrow accent">Survey builder</span><h1>Surveys</h1></div><p>Survey definitions are saved in Firestore. Survey responses remain local and are not emailed yet.</p></section><section id="admin-surveys-list" class="card-grid three"></section></main>
+    <dialog id="survey-modal" class="admin-modal wide-modal"><form id="survey-form" method="dialog"><div class="modal-head"><h2>Survey builder</h2><button class="icon-button" type="button" data-close-modal="survey-modal" aria-label="Close">×</button></div><label><span>Survey title</span><input name="title" required /></label><label><span>Description</span><textarea name="description" rows="2" required></textarea></label><div id="question-builder" class="question-builder"></div><div class="builder-tools"><button class="btn btn-secondary" type="button" id="add-question-btn">Add question</button><label class="checkbox-label"><input type="checkbox" name="publish" /> Publish</label></div><div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal="survey-modal">Cancel</button><button class="btn btn-primary" type="submit">Save draft</button></div></form></dialog>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create local demo notifications for COMMando Fitness Gym." />
+    <title>Notification Management | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/components.js"></script>
+    <script type="module" src="../js/admin/guard.js"></script>
+    <script type="module" src="../js/admin/notifications.js"></script>
+  </head>
+  <body class="admin-page" data-page="admin-notifications" style="visibility:hidden">
+    <header class="admin-topbar"><a class="brand-wrap" href="index.html"><img src="../assets/logo/commando-mark.svg" alt="" />COMMando Admin</a><nav class="admin-nav" aria-label="Admin navigation"><a href="index.html">Dashboard</a><a href="machines.html">Machines</a><a href="fees.html">Fees</a><a href="notifications.html" class="active">Notifications</a><a href="surveys.html">Surveys</a><a href="responses.html">Responses</a><a href="enquiries.html">Enquiries</a></nav><button class="btn btn-primary" id="add-notification-btn" type="button">Create notification</button></header>
+    <main class="admin-shell"><section class="admin-hero"><div><span class="eyebrow accent">Communication</span><h1>Notification center</h1></div><p>Published and draft notifications are managed in Firestore.</p></section><section id="admin-notifications-list" class="card-list stacked"></section></main>
+    <dialog id="notification-modal" class="admin-modal"><form id="notification-form" method="dialog"><div class="modal-head"><h2>Create notification</h2><button class="icon-button" type="button" data-close-modal="notification-modal" aria-label="Close">×</button></div><div class="form-grid two"><label><span>Title</span><input type="text" name="title" required /></label><label><span>Type</span><select name="type"><option>Announcement</option><option>Gym Update</option><option>Event</option><option>Survey</option><option>Important</option><option>Emergency</option></select></label><label><span>Priority</span><select name="priority"><option>Normal</option><option>Important</option><option>Urgent</option></select></label><label><span>Publish time</span><input type="datetime-local" name="publishTime" /></label><label><span>Expiry time</span><input type="datetime-local" name="expiryTime" /></label><label><span>Status</span><select name="status"><option>Published</option><option>Draft</option></select></label><label class="full"><span>Message</span><textarea name="message" rows="4" required></textarea></label><label class="full checkbox-label"><input type="checkbox" name="banner" /> Show as public banner</label></div><div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal="notification-modal">Cancel</button><button class="btn btn-primary" type="submit">Save notification</button></div></form></dialog>
+  </body>
+</html>

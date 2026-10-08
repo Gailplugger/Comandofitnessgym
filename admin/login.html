@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin login for the COMMando Fitness Gym prototype." />
+    <title>Admin Login | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/admin/login.js"></script>
+  </head>
+  <body class="admin-page admin-login-page" data-page="admin-login">
+    <main class="admin-login-shell">
+      <div class="admin-login-card">
+        <div class="brand-row">
+          <img src="../assets/logo/commando-mark.svg" alt="COMMando Fitness Gym" />
+          <div>
+            <span class="eyebrow accent">Admin access</span>
+            <h1>COMMando Fitness Admin</h1>
+          </div>
+        </div>
+        <p class="login-note">Sign in with the authorized gym administrator account.</p>
+        <form id="admin-login-form" novalidate>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Admin email" autocomplete="username" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Password" autocomplete="current-password" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p class="status-text" id="admin-login-status" aria-live="polite">Use your Firebase admin account. Never share its password.</p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
