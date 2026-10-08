@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin dashboard for COMMando Fitness Gym Rajgarh." />
+    <title>Admin Dashboard | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/admin/guard.js"></script>
+    <script type="module" src="../js/admin/admin.js"></script>
+  </head>
+  <body class="admin-page" data-page="admin-dashboard" style="visibility:hidden">
+    <header class="admin-topbar">
+      <a class="brand-wrap" href="index.html"><img src="../assets/logo/commando-mark.svg" alt="" />COMMando Admin</a>
+      <nav class="admin-nav" aria-label="Admin navigation"><a href="index.html" class="active">Dashboard</a><a href="machines.html">Machines</a><a href="fees.html">Fees</a><a href="notifications.html">Notifications</a><a href="surveys.html">Surveys</a><a href="responses.html">Responses</a><a href="enquiries.html">Enquiries</a></nav>
+    </header>
+    <main class="admin-shell">
+      <section class="admin-hero"><div><span class="eyebrow accent">Dashboard</span><h1>Overview</h1></div><p>Gym content is managed in Firebase. Survey responses and enquiries currently remain local/Formspree.</p></section>
+      <section id="admin-stats" class="stats-grid"></section>
+      <section class="dashboard-panels">
+        <div class="card-panel"><h2>Recent activity</h2><ul id="admin-activity" class="activity-list"></ul></div>
+        <div class="card-panel"><h2>Data snapshot</h2><div id="admin-chart" class="bar-chart"></div></div>
+      </section>
+      <p class="prototype-note">Machines, fees, notifications, and survey definitions are stored in Firestore. Survey responses and enquiries are not stored in Firestore.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notifications and updates for COMMando Fitness Gym Rajgarh." />
+    <meta property="og:title" content="Notifications | COMMando Fitness Gym Rajgarh" />
+    <meta property="og:description" content="Browse gym notices and updates in the demo notification center." />
+    <meta property="og:type" content="website" />
+    <title>Notifications | COMMando Fitness Gym Rajgarh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/components.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/notifications.js"></script>
+  </head>
+  <body class="public-page" data-page="notifications">
+    <header id="site-header"></header>
+    <div id="notification-banner" aria-live="polite"></div>
+    <main class="page-shell">
+      <section class="page-intro">
+        <span class="eyebrow accent">Notifications</span>
+        <h1>Stay informed.</h1>
+      </section>
+      <div id="notifications-list" class="card-list stacked"></div>
+      <div id="notifications-empty" class="empty-state hidden">No notifications yet.</div>
+    </main>
+    <footer id="site-footer"></footer>
+  </body>
+</html>

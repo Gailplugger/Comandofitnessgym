@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isGymAdmin() {
+      return request.auth != null
+        && request.auth.token.email == 'kartikgoyalrajgarh@gmail.com';
+    }
+
+    match /machines/{itemId} {
+      allow read: if isGymAdmin() || resource.data.status == 'Published';
+      allow write: if isGymAdmin();
+    }
+
+    match /fees/{itemId} {
+      allow read: if isGymAdmin() || resource.data.status == 'Published';
+      allow write: if isGymAdmin();
+    }
+
+    match /notifications/{itemId} {
+      allow read: if isGymAdmin() || resource.data.status == 'Published';
+      allow write: if isGymAdmin();
+    }
+
+    match /surveys/{itemId} {
+      allow read: if isGymAdmin() || resource.data.status == 'Published';
+      allow write: if isGymAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

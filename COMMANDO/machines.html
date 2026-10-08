@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore selected COMMando Fitness Gym machines in Sadulpur (Rajgarh), then visit to see more equipment in person." />
+    <meta property="og:title" content="Machines | COMMando Fitness Gym Rajgarh" />
+    <meta property="og:description" content="Explore selected gym equipment and visit COMMando Fitness Gym to see more machines in person." />
+    <meta property="og:type" content="website" />
+    <title>Machines | COMMando Fitness Gym Rajgarh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/components.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/machines.js"></script>
+  </head>
+  <body class="public-page" data-page="machines">
+    <header id="site-header"></header>
+    <div id="notification-banner" aria-live="polite"></div>
+    <main class="page-shell">
+      <section class="page-intro">
+        <span class="eyebrow accent">Machines</span>
+        <h1>Equipment library</h1>
+        <p>Explore equipment pictured in the gym's supplied photo set. Confirm machine labels and setup in person, especially where a photo name is unclear.</p>
+      </section>
+
+      <section class="filter-panel">
+        <div class="search-box">
+          <label class="sr-only" for="machine-search">Search machines</label>
+          <input id="machine-search" type="search" placeholder="Search by name or muscle group" />
+        </div>
+        <div id="category-filters" class="chip-group" aria-label="Filter machines by category"></div>
+      </section>
+
+      <section id="machines-grid" class="card-grid three" aria-live="polite"></section>
+      <div id="machines-empty" class="empty-state hidden">No machines available yet.</div>
+      <aside class="machine-visit-note">
+        <span class="eyebrow accent">More to explore in person</span>
+        <h2>These are just some of the machines we have.</h2>
+        <p>Our online guide shows a selection of equipment. Visit COMMando Fitness Gym to see the wider training floor, explore more machines and ask a coach which options fit your goals.</p>
+        <a class="btn btn-primary" href="contact.html">Plan your visit</a>
+      </aside>
+    </main>
+    <footer id="site-footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage placeholder membership fee plans in the COMMando Fitness Gym prototype." />
+    <title>Fee Management | COMMando Fitness Gym</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/components.js"></script>
+    <script type="module" src="../js/admin/guard.js"></script>
+    <script type="module" src="../js/admin/fees.js"></script>
+  </head>
+  <body class="admin-page" data-page="admin-fees" style="visibility:hidden">
+    <header class="admin-topbar"><a class="brand-wrap" href="index.html"><img src="../assets/logo/commando-mark.svg" alt="" />COMMando Admin</a><nav class="admin-nav" aria-label="Admin navigation"><a href="index.html">Dashboard</a><a href="machines.html">Machines</a><a href="fees.html" class="active">Fees</a><a href="notifications.html">Notifications</a><a href="surveys.html">Surveys</a><a href="responses.html">Responses</a><a href="enquiries.html">Enquiries</a></nav><button class="btn btn-primary" id="add-fee-btn" type="button">Add plan</button></header>
+    <main class="admin-shell"><section class="admin-hero"><div><span class="eyebrow accent">Membership</span><h1>Fee management</h1></div><p>Current rates were supplied by the gym owner. Memberships are arranged directly with the gym.</p></section><section id="admin-fees-list" class="pricing-grid admin-pricing-grid"></section></main>
+    <dialog id="fee-modal" class="admin-modal"><form id="fee-form" method="dialog"><div class="modal-head"><h2>Add plan</h2><button class="icon-button" type="button" data-close-modal="fee-modal" aria-label="Close">×</button></div><div class="form-grid two"><label><span>Plan</span><input type="text" name="plan" required /></label><label><span>Duration</span><input type="text" name="duration" required /></label><label><span>Price</span><input type="text" name="price" required /></label><label><span>Status</span><select name="status"><option>Published</option><option>Draft</option></select></label><label class="full"><span>Features (one per line)</span><textarea name="features" rows="4" required></textarea></label></div><div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal="fee-modal">Cancel</button><button class="btn btn-primary" type="submit">Save plan</button></div></form></dialog>
+  </body>
+</html>
