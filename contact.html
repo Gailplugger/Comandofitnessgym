@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Visit COMMando Fitness Gym near Court–Railway Station Road, Sadulpur (Rajgarh), Rajasthan. Find directions and contact the gym on Instagram." />
+    <meta property="og:title" content="Contact | COMMando Fitness Gym Rajgarh" />
+    <meta property="og:description" content="Gym contact details are placeholders; enquiries are stored locally for this demo." />
+    <meta property="og:type" content="website" />
+    <title>Contact | COMMando Fitness Gym Rajgarh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo/commando-mark.svg" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/components.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/contact.js"></script>
+  </head>
+  <body class="public-page" data-page="contact">
+    <header id="site-header"></header>
+    <div id="notification-banner" aria-live="polite"></div>
+    <main class="page-shell">
+      <section class="page-intro">
+        <span class="eyebrow accent">Contact</span>
+        <h1>Get in touch.</h1>
+      </section>
+      <div class="contact-shell">
+        <aside class="contact-card info-card">
+          <h2>COMMando Fitness Gym</h2>
+          <ul>
+            <li><strong>Location:</strong> <span id="gym-address">COMMando Fitness Gym, Sadulpur (Rajgarh), Rajasthan</span></li>
+            <li class="phone-note" id="gym-phone-note">No phone number is currently listed on the Google Maps business profile.</li>
+            <li><strong>Hours:</strong> Check current hours on Google Maps or Instagram before visiting.</li>
+          </ul>
+          <div class="map-card">
+            <span class="map-card-pin" aria-hidden="true">⌖</span>
+            <div><strong>Rajgarh · Sadulpur</strong><span>Near Court–Railway Station Road</span><small>Use Google Maps for the latest route and listing details.</small></div>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-primary" id="directions-link" href="https://www.google.com/maps/dir/?api=1&destination=28.6359431%2C75.3890328" target="_blank" rel="noopener noreferrer">Get directions</a>
+            <a class="btn btn-secondary" id="maps-link" href="https://www.google.com/maps/search/?api=1&query=COMMando+Fitness+Gym%2C+J9PQ%2B9PP%2C+Sadulpur%2C+Rajasthan+331023" target="_blank" rel="noopener noreferrer">View Google Maps listing</a>
+          </div>
+          <p class="status-text">Address is based on the public Google Maps listing. Please check the map listing before travel.</p>
+          <a class="instagram-link" href="https://www.instagram.com/commandofittness_rj10/" target="_blank" rel="noopener noreferrer" aria-label="Visit COMMando Fitness on Instagram">
+            <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>
+            <span>@commandofittness_rj10</span>
+          </a>
+        </aside>
+        <div class="contact-card form-card">
+          <h2>Send an enquiry</h2>
+          <form id="contact-form" action="https://formspree.io/f/mzedeloq" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Website enquiry - COMMando Fitness" />
+            <div class="form-grid two">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send enquiry</button>
+            <p id="contact-status" class="status-text" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer id="site-footer"></footer>
+  </body>
+</html>
